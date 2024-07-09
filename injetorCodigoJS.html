@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Injeção de JavaScript</title>
+</head>
+<body>
+<h1>Injetor codigo javascript no html</h1>
+    <!-- Pop-up que queremos esconder -->
+    <div id="wallIframe">Este é um pop-up!</div>
+
+    <!-- Campo de entrada para inserir código JavaScript -->
+    <textarea id="jsCode" rows="4" cols="50" placeholder="Insira seu código JavaScript aqui"></textarea>
+
+    <!-- Botão para executar o código -->
+    <button onclick="executarCodigo()">Executar Código</button>
+
+    <!-- Seu código JavaScript -->
+    <script>
+        // Encontra o elemento com o ID "wallIframe"
+        var element = document.getElementById("wallIframe");
+
+        // Esconde o pop-up definindo o estilo de exibição como "none"
+        element.style.display = "none";
+
+        // Função para executar o código inserido no campo de entrada
+        function executarCodigo() {
+            var codigo = document.getElementById("jsCode").value;
+            eval(codigo); // Executa o código
+        }
+    </script>
+</body>
+</html>
+
+
+<-------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+    /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.lista-tarefas {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+    
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Adicionar link no site<br>pesquisar mesmo link na pesquisa site</h1>
+    <div class="lista-tarefas">
+        <input type="text" id="tarefa" placeholder="Digite uma tarefa">
+        <button onclick="adicionarTarefa()">Adicionar</button>
+        <ul id="lista"></ul>
+    </div>
+
+    <script>// script.js
+const inputTarefa = document.getElementById('tarefa');
+const listaTarefas = document.getElementById('lista');
+
+function adicionarTarefa() {
+    const tarefa = inputTarefa.value.trim();
+    if (tarefa) {
+        const li = document.createElement('li');
+        li.textContent = tarefa;
+        listaTarefas.appendChild(li);
+        inputTarefa.value = '';
+    }
+}</script>
+</body>
+</html>
