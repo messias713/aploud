@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pesquisa</title>
+</head>
+<body>
+    <form id="search-form" action="processa_pesquisa.php" method="GET">
+        <input type="text" id="search-input" name="q" placeholder="Digite sua pesquisa...">
+        <button type="submit">Pesquisar</button>
+    </form>
+    
+    
+    <script>
+    document.getElementById('search-input').addEventListener('keyup', function() {
+    const searchTerm = this.value.toLowerCase();
+    const tableRows = document.querySelectorAll('#tabela-produtos tbody tr');
+
+    tableRows.forEach(row => {
+        const rowData = row.textContent.toLowerCase();
+        if (rowData.includes(searchTerm)) {
+            row.style.display = 'table-row';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+});
+    
+    </script>
+    <pre>
+    =importHTML("[^1^][1]"; "table"; 1)
+
+
+ =importHTML("http://www.cbr.ru/eng//RelatorioPortal.aspx"; "table"; 1)/2024
+ Mudar numero tabela de 1 para 12 exemplo
+    </pre>
+</body>
+<a href="https://livrosaartedoespirito.blogspot.com/2024/07/import-html-injection.html">injetar-importHTML</a>
+</html>
+
