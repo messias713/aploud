@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Importar Script Externo</title>
+</head>
+<h1>Codigo saber tudo sobre empresas banco portugal!</h1>
+<body>
+
+<textarea id="textArea" rows="4" cols="50"></textarea><br>
+<button onclick="importFiles()">Importar PDF e Abrir URL</button>
+
+<script>
+function importFiles() {
+    // Importar PDF
+    var importPdfUrl = 'https://www.bportugal.pt//search/?text=pdf';
+    window.open(importPdfUrl, '_blank'); // Abre o PDF em uma nova aba
+
+    // Abrir URL
+    var url = 'https://sites.google.com/view/injethtml/home'; // URL que você deseja abrir
+    window.open(url, '_blank'); // Abre a URL em uma nova aba
+
+    var textArea = document.getElementById('textArea');
+    textArea.value = 'PDF e URL abertos com sucesso!';
+}
+</script>
+
+</body>
+</html>
+
