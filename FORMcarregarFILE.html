@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload de Arquivos</title>
+</head>
+<body>
+    <h1>Upload de Arquivos</h1>
+    
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="image">Imagem:</label>
+        <input type="file" id="image" name="image" accept="image/*"><br><br>
+        
+        <label for="pdf">PDF:</label>
+        <input type="file" id="pdf" name="pdf" accept=".pdf"><br><br>
+        
+        <label for="text">Arquivo de Texto:</label>
+        <input type="file" id="text" name="text" accept=".txt"><br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
