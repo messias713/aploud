@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Importar Script Externo</title>
+</head>
+<h1>Entrar no vovo site<br> pesquisar DNS superior</h1>
+<body>
+
+<label for="searchTerm">Insira o termo de pesquisa:</label><br>
+<input type="text" id="searchTerm"><br>
+<button onclick="searchPdf()">Pesquisar Documento PDF</button>
+
+<script>
+function searchPdf() {
+    var searchTerm = document.getElementById('searchTerm').value;
+    
+    if (searchTerm.trim() === '') {
+        alert('Por favor, insira um termo de pesquisa válido.');
+        return;
+    }
+
+    var searchPdfUrl = 'https://www.example.com/search/?text=' + searchTerm; // Substitua 'https://sites.google.com/view/injethtml/home' pelo site de pesquisa de documentos PDF que deseja usar
+    window.open(searchPdfUrl, '_blank'); // Abre a URL de pesquisa do documento PDF em uma nova aba
+
+    var textArea = document.getElementById('textArea');
+    textArea.value = 'Pesquisa de documento PDF realizada com sucesso!';
+}
+</script>
+<h1>Todos os dominios internet<br><a href="https://www.iana.org/domains/root/files">Open domin</a><br><a href="https://www.icann.org/">ABRIR LINK DOMINIO 2020=2023 Etc</a></h1>
+</body>
+</html>
+https://www.icann.org/
+
+https://www.iana.org/domains/root/files
+
