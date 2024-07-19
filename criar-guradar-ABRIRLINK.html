@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ text-decoration:none;
+</style>
+  <title>Meus Links</title>
+</head>
+<body>
+  <h1>Meus Links</h1>
+  <input type="text" id="linkInput" placeholder="Digite o link aqui">
+  <button onclick="salvarLink()">Salvar Link</button>
+  <ul id="listaLinks"></ul>
+
+  <script>
+    let links = [];
+
+    function salvarLink() {
+      let novoLink = document.getElementById('linkInput').value;
+      links.push(novoLink);
+      atualizarLista();
+    }
+
+    function atualizarLista() {
+      let listaLinks = document.getElementById('listaLinks');
+      listaLinks.innerHTML = '';
+      links.forEach(link => {
+        let li = document.createElement('li');
+        let a = document.createElement('a');
+        a.href = link;
+        a.textContent = link;
+        li.appendChild(a);
+        listaLinks.appendChild(li);
+        a.addEventListener('click', () => {
+          window.open(link);
+        })
+      });
+    }
+  </script>
+</body>
+</html>
